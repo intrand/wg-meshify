@@ -1,10 +1,20 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 
 	"gopkg.in/alecthomas/kingpin.v2"
+)
+
+var (
+	version = "" // to be filled in by goreleaser
+	commit  = "" // to be filled in by goreleaser
+	date    = "" // to be filled in by goreleaser
+	builtBy = "" // to be filled in by goreleaser
+	cmdname = filepath.Base(os.Args[0])
 )
 
 const filePerms = 0600
@@ -15,6 +25,11 @@ func main() {
 
 	// main decision tree
 	switch args { // look for operations at the root of the command
+
+	// version
+	case cmd_version.FullCommand():
+		fmt.Println(
+			"{\"version\":\"" + version + "\",\"commit\":\"" + commit + "\",\"date\":\"" + date + "\",\"built_by\":\"" + builtBy + "\"}")
 
 	// mesh
 	case cmd_mesh_create.FullCommand(): // handle removing a peer

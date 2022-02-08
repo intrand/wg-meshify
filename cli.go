@@ -9,6 +9,8 @@ var (
 	app      = kingpin.New("wg-meshify", "Generates configuration files for all members of a wireguard mesh").Author("intrand")
 	cmd_conf = app.Flag("conf", "Path to your_mesh_config.yml").Envar("wg_meshify_conf").Default("mesh.yml").String()
 
+	cmd_version = app.Command("version", "prints version and exits")
+
 	// mesh
 	cmd_mesh = app.Command("mesh", "mesh stuff")
 
