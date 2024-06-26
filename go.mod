@@ -1,16 +1,15 @@
 module github.com/intrand/wg-meshify
 
-go 1.17
+go 1.22
 
 require (
-	golang.zx2c4.com/wireguard/wgctrl v0.0.0-20211006223443-a91c1c5da815
-	gopkg.in/alecthomas/kingpin.v2 v2.2.6
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+	github.com/alecthomas/kingpin/v2 v2.4.0
+	golang.zx2c4.com/wireguard/wgctrl v0.0.0-20230429144221-925a1e7659e6
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
-	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751 // indirect
-	github.com/alecthomas/units v0.0.0-20210927113745-59d0afb8317a // indirect
-	github.com/stretchr/testify v1.7.0 // indirect
-	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
+	github.com/alecthomas/units v0.0.0-20231202071711-9a357b53e9c9 // indirect
+	github.com/xhit/go-str2duration/v2 v2.1.0 // indirect
+	golang.org/x/crypto v0.24.0 // indirect
 )
